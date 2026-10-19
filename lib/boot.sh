@@ -372,16 +372,9 @@ shutdown_screen() {
     sleep 3.0
 }
 
-# Stop hele scriptet med det samme (fra enhver menu via +)
+# Stop hele scriptet via shutdown-sekvensen (fra enhver menu via +)
 quit_program() {
     shutdown_screen
-    exit 0
-}
-
-# Hemmelig hurtig-exit (CHOICE: !!) — uden shutdown-sekvens
-quit_fast() {
-    hide_cursor
-    cls
     exit 0
 }
 

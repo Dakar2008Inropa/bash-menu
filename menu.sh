@@ -108,21 +108,14 @@ done
 unset _game_file
 
 CHOICE_VALUE=""
-SKIP_BOOT=0
 
 for arg in "$@"; do
     case "$arg" in
-        --skip-boot|--no-boot|-n)
-            SKIP_BOOT=1
-            ;;
         -h|--help)
             cat <<'EOF'
-Usage: ./menu.sh [options]
+Usage: ./menu.sh
 
-  -n, --no-boot, --skip-boot   Spring boot-sekvensen over
-  -h, --help                   Vis denne hjælp
-
-Hemmelig CHOICE i menuen: !!   Exit med det samme (uden shutdown)
+  -h, --help    Vis denne hjælp
 
 Moduler: lib/tui.sh menus.sh system.sh fun.sh boot.sh tools.sh ssh.sh + games/
 EOF
@@ -131,9 +124,7 @@ EOF
     esac
 done
 
-if (( ! SKIP_BOOT )); then
-    boot_screen
-fi
+boot_screen
 
 while true; do
     MENU_MODE=main
@@ -151,7 +142,6 @@ while true; do
         9) tools_menu; continue ;;
         10) ssh_menu; continue ;;
         +) quit_program ;;
-        '!!') quit_fast ;;
         *)
             cls
             goto $(( $(rows) / 2 )) 4

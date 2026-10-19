@@ -9,10 +9,10 @@ Krav: Bash, en terminal på ca. 76×36, og almindelige værktøjer (`ps`, `find`
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Dakar2008Inropa/bash-menu/main/install.sh | bash
 cd ~/bash-menu
-./menu.sh -n
+./menu.sh
 ```
 
-`curl` installeres med `sudo apt install curl`, hvis den mangler. Uden `-n` vises en boot-skærm først.
+`curl` installeres med `sudo apt install curl`, hvis den mangler. Programmet starter med boot-skærmen og slutter med shutdown-skærmen.
 
 Installeren lægger ikonet **Bash-menu** på skrivebordet og i applikationsmenuen. Det åbner menuen i et terminalvindue. På GNOME skal man nogle gange højreklikke og vælge Tillad start.
 
@@ -22,7 +22,7 @@ Installeren lægger ikonet **Bash-menu** på skrivebordet og i applikationsmenue
 git clone https://github.com/Dakar2008Inropa/bash-menu.git
 cd bash-menu
 ./install.sh
-./menu.sh -n
+./menu.sh
 ```
 
 ## Indhold

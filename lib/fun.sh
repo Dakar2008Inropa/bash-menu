@@ -745,9 +745,6 @@ fun_extras() {
             +)
                 quit_program
                 ;;
-            '!!')
-                quit_fast
-                ;;
             *)
                 cls
                 goto $(( $(rows) / 2 )) 4

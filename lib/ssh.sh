@@ -288,7 +288,6 @@ ssh_menu() {
             5) ssh_test_connection ;;
             0) MENU_MODE=main; return ;;
             +) quit_program ;;
-            '!!') quit_fast ;;
             *)
                 cls
                 goto $(( $(rows) / 2 )) 4

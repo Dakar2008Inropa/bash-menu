@@ -546,7 +546,6 @@ tools_menu() {
             12) tool_health_check ;;
             0) MENU_MODE=main; return ;;
             +) quit_program ;;
-            '!!') quit_fast ;;
             *)
                 cls
                 goto $(( $(rows) / 2 )) 4
