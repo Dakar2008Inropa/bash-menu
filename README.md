@@ -14,6 +14,8 @@ cd ~/bash-menu
 
 `curl` installeres med `sudo apt install curl`, hvis den mangler. Uden `-n` vises en boot-skærm først.
 
+Installeren lægger ikonet **Bash-menu** på skrivebordet og i applikationsmenuen. Det åbner menuen i et terminalvindue. På GNOME skal man nogle gange højreklikke og vælge Tillad start.
+
 ## Manuel
 
 ```bash
@@ -31,4 +33,4 @@ cd bash-menu
 | `lib/` | System, tools, SSH, Fun, boot |
 | `games/` | Spillene |
 | `tools/` | Python-demo og mygrep |
-| `install.sh` | Lægger det i `~/bash-menu` |
+| `install.sh` | Installerer til `~/bash-menu` og lægger et skrivebordsikon |
